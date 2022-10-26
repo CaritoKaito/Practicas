@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\ValidadorForm1;
+
 class ControladorPaginas extends Controller
 {
     function fPrincipal(){
@@ -18,10 +20,7 @@ class ControladorPaginas extends Controller
         return view('consulta');
     }
 
-    public function procesarDatos(){
-        if(request()->filled('txtNombre')){
-            return 'Se lleno el campo de nombre:'.request()->input('txtNombre');
-        }
-            return 'No se lleno el campo de nombre';
-}
+    public function procesarDatos(ValidadorForm1 $req){
+        return redirect("/formulario")-> with('confirmacion', 'Tu formulario se esta procesando');
+    }
 }
