@@ -28,6 +28,7 @@ class ValidadorForm1 extends FormRequest
             'txtApellido'=>'required',
             'txtEdad'=>'required',
             'txtDescripcion'=>'required'
+            
         ];
     }
 }

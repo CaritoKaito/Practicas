@@ -27,31 +27,31 @@
         @endforeach
     @endif
 
-<br>
+
     <div>
         <form method="post" action="guardarDatos">
             @csrf 
             <div>
-                <label  class= "form label" name="labelNombre">Ingresa tu nombre(s): </label>
+                <label  class= "form label" name="labelNombre">Ingresa el nombre: </label>
                 <input type="text" class="form-control" name="txtNombre"value="{{ old('txtNombre')}}">
                 <p class="fw-bold text-danger">{{$errors->first('txtNombre')}}</p>
             </div>
-<br>
+
             <div>
-                <label  class= "form label" name="labelApellido">Ingresa tus apellidos: </label>
+                <label  class= "form label" name="labelApellido">Ingresar Apellido: </label>
                 <input type="text" class="form-control" name="txtApellido" value="{{ old('txtApellido')}}">
                 <p class="fw-bold text-danger">{{$errors->first('txtApellido')}}</p>
             </div>
-<br>
+
             <div>
-                <label  class= "form label" name="labelEdad">Ingresa tu edad: </label>
+                <label  class= "form label" name="labelEdad">Ingresar Edad: </label>
                 <input type="text" class="form-control" name="txtEdad" value="{{ old('txtEdad')}}">
                 <p class="fw-bold text-danger">{{$errors->first('txtEdad')}}</p>
             </div>
-<br>
+
             <div>
-                <label class="form-label" name="labelDescripcion"> Describe tus habilidades:</label>
-                <textarea class="form-label" name="txtDescripcion" row="3"value="{{ old('txtDescripcion')}}"></textarea>
+                <label class="form-label" name="labelDescripcion"> Descripcion:</label>
+                <textarea class="form-label" name="txtDescripcion" row="3" value="{{ old('txtDescripcion')}}"></textarea>
                 <p class="fw-bold text-danger">{{$errors->first('txtDescripcion')}}</p>
             </div>
         </div>

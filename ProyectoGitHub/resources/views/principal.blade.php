@@ -8,7 +8,7 @@
         <div class="row">
             <div class="row">
 
-            <img src="/Kaito-1.png"/> 
+            <img src="/comicslogo.jpg"/> 
 
 
 </body>
